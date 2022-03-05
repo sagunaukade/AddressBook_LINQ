@@ -84,6 +84,15 @@ namespace AddressBookLINQTest
             string actual = dataTableManger.RetrieveCountBasedOnCityorState();
             Assert.AreEqual(actual, expected);
         }
+        //Usecase 7 Sort based on City
+        [TestMethod]
+        [TestCategory("Sort based on City")]
+        public void GivenSortQuery_BasedOnCityandState_returnString()
+        {
+            string expected = "Saguna Amruta ";
+            string actual = dataTableManger.SortBasedOnNameInDataTable("Pune");
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
 
