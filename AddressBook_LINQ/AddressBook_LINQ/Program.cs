@@ -40,10 +40,10 @@ namespace AddressBook_LINQ
             dataTableManger.InsertintoDataTable(contactDataManagers);
             dataTableManger.Display();
             //Modify
-            int varl = dataTableManger.EditDataTable("lalita", "Lastname");
+            int varl = dataTableManger.EditDataTable("Amruta", "Lastname");
             Console.WriteLine("Success" + varl);
             //Delete
-            int var2 = dataTableManger.DeleteRowInDataTable("lalita");
+            int var2 = dataTableManger.DeleteRowInDataTable("Saguna");
             Console.WriteLine("Success" + varl);
             //Retrieve based on city or state
             string var3 = dataTableManger.RetrieveBasedOnCityorState("Bareilly", "UP");
@@ -52,7 +52,7 @@ namespace AddressBook_LINQ
             string var4 = dataTableManger.RetrieveCountBasedOnCityorState();
             Console.WriteLine("Success" + varl);
             //sort based on name in data table
-            string var5 = dataTableManger.SortBasedOnNameInDataTable("chennai");
+            string var5 = dataTableManger.SortBasedOnNameInDataTable("Pune");
             Console.WriteLine("Success" + varl);
         }
     }

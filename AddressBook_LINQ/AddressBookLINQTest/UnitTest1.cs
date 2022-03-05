@@ -93,6 +93,15 @@ namespace AddressBookLINQTest
             string actual = dataTableManger.SortBasedOnNameInDataTable("Pune");
             Assert.AreEqual(actual, expected);
         }
+        //Usecase 8 sort based on Contact Type
+        [TestMethod]
+        [TestCategory("Sort based on Type")]
+        public void GivenCountQuery_BasedOnCityandState_returnString()
+        {
+            string expected = "1 1 1 ";
+            string actual = dataTableManger.RetrieveCountBasedOnType();
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
 
