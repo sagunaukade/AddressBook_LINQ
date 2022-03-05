@@ -102,6 +102,6 @@ namespace AddressBookLINQTest
             string actual = dataTableManger.RetrieveCountBasedOnType();
             Assert.AreEqual(actual, expected);
         }
-    }
+    }  
 }
 
