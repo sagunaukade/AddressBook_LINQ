@@ -45,7 +45,9 @@ namespace AddressBook_LINQ
             //Delete
             int var2 = dataTableManger.DeleteRowInDataTable("lalita");
             Console.WriteLine("Success" + varl);
-
+            //Retrieve based on city or state
+            string var3 = dataTableManger.RetrieveBasedOnCityorState("Bareilly", "UP");
+            Console.WriteLine("Success" + varl);
         }
     }
 }
