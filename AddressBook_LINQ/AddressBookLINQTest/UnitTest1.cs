@@ -20,8 +20,9 @@ namespace AddressBookLINQTest
         public void GivenInsertValues_returnInteger()
         {
             int expected = 2;
-            int actual = dataTableManger.CreateDataTable();
+            int actual = dataTableManger.AddValues();
             Assert.AreEqual(actual, expected);
         }
     }
 }
+

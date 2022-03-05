@@ -20,26 +20,30 @@ namespace AddressBook_LINQ
             //Insert Values into Table
             contactDataManager.FirstName = "Saguna";
             contactDataManager.LastName = "Ukade";
-            contactDataManager.PhoneNumber = 9977668754;
-            contactDataManager.Email = "saguna98@gmail.com";
-            contactDataManager.Address = "503,B Block,Shivane";
+            contactDataManager.PhoneNumber = 9842905050;
+            contactDataManager.Email = "saguna34@gmail.com";
+            contactDataManager.Address = "404,B Block,Shivane";
             contactDataManager.City = "Pune";
-            contactDataManager.State = "Maharashtra";
-            contactDataManager.zip = 411023;
+            contactDataManager.State = "MH";
+            contactDataManager.zip = 411032;
             dataTableManger.InsertintoDataTable(contactDataManager);
 
             //Insert Values into Table
             contactDataManagers.FirstName = "Amruta";
             contactDataManagers.LastName = "Sharma";
-            contactDataManagers.PhoneNumber = 8867543212;
-            contactDataManagers.Email = "amruta23@gmail.com";
-            contactDataManagers.Address = "78 street,Kolhapur";
-            contactDataManagers.City = "Kolhapur";
-            contactDataManagers.State = "Maharashtra";
-            contactDataManagers.zip = 4321981;
+            contactDataManagers.PhoneNumber = 7742905050;
+            contactDataManagers.Email = "Amruta@gmail.com";
+            contactDataManagers.Address = "54 street,Sangli";
+            contactDataManagers.City = "Sangli";
+            contactDataManagers.State = "MH";
+            contactDataManagers.zip = 427801;
             dataTableManger.InsertintoDataTable(contactDataManagers);
             dataTableManger.Display();
         }
     }
 }
+
+
+
+
        
