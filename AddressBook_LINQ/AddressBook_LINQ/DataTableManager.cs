@@ -120,25 +120,25 @@ namespace AddressBook_LINQ
             ContactDataManager contactDataManager = new ContactDataManager();
             ContactDataManager contactDataManagers = new ContactDataManager();
             //Insert Values into Table
-            contactDataManager.FirstName = "Shalini";
-            contactDataManager.LastName = "Venkatesh";
+            contactDataManager.FirstName = "Saguna";
+            contactDataManager.LastName = "Ukade";
             contactDataManager.PhoneNumber = 9842905050;
-            contactDataManager.Email = "shalini@gmail.com";
-            contactDataManager.Address = "4,B Block,Avadi";
-            contactDataManager.City = "chennai";
-            contactDataManager.State = "TN";
-            contactDataManager.zip = 600072;
+            contactDataManager.Email = "saguna34@gmail.com";
+            contactDataManager.Address = "404,B Block,Shivane";
+            contactDataManager.City = "Pune";
+            contactDataManager.State = "MH";
+            contactDataManager.zip = 411032;
             InsertintoDataTable(contactDataManager);
 
             //Insert Values into Table
-            contactDataManagers.FirstName = "Raksha";
-            contactDataManagers.LastName = "Parthiban";
+            contactDataManagers.FirstName = "Amruta";
+            contactDataManagers.LastName = "Sharma";
             contactDataManagers.PhoneNumber = 7742905050;
-            contactDataManagers.Email = "raksha@gmail.com";
-            contactDataManagers.Address = "Sasthri street,ambattur";
-            contactDataManagers.City = "chennai";
-            contactDataManagers.State = "TN";
-            contactDataManagers.zip = 123001;
+            contactDataManagers.Email = "Amruta@gmail.com";
+            contactDataManagers.Address = "54 street,Sangli";
+            contactDataManagers.City = "Sangli";
+            contactDataManagers.State = "MH";
+            contactDataManagers.zip = 427801;
             InsertintoDataTable(contactDataManagers);
             return custTable.Rows.Count;
         }
@@ -156,6 +156,18 @@ namespace AddressBook_LINQ
             dtRow["Email"] = contactDataManager.Email;
             custTable.Rows.Add(dtRow);
         }
+        public int EditDataTable(string FirstName, string ColumnName)
+        {
+            AddValues();
+            var modifiedList = (from ContactList in custTable.AsEnumerable() where ContactList.Field<string>("FirstName") == FirstName select ContactList).FirstOrDefault();
+            if (modifiedList != null)
+            {
+                modifiedList[ColumnName] = "Sing";
+                Display();
+                return 1;
+            }
+            else return 0;
+        }
         //Display all Values in DataRow
         public void Display()
         {
@@ -164,6 +176,5 @@ namespace AddressBook_LINQ
                 Console.WriteLine("{0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7}\n", dtRows["FirstName"], dtRows["LastName"], dtRows["Address"], dtRows["City"], dtRows["State"], dtRows["Zip"], dtRows["PhoneNumber"], dtRows["Email"]);
             }
         }
-
     }
 }
